@@ -1,0 +1,1 @@
+# XrmTools.PluginRegistration

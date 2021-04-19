@@ -39,7 +39,6 @@ namespace PluginRegistrationUsingXml
             this.btnRegisterPlugins = new System.Windows.Forms.Button();
             this.btnbrowseRegistrationFile = new System.Windows.Forms.Button();
             this.btnBrowsePluginsDLL = new System.Windows.Forms.Button();
-            this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.toolStripMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,18 +46,17 @@ namespace PluginRegistrationUsingXml
             // 
             this.toolStripMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbClose,
             this.tssSeparator1});
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
-            this.toolStripMenu.Size = new System.Drawing.Size(1400, 34);
+            this.toolStripMenu.Size = new System.Drawing.Size(1400, 28);
             this.toolStripMenu.TabIndex = 4;
             this.toolStripMenu.Text = "toolStrip1";
             // 
             // tssSeparator1
             // 
             this.tssSeparator1.Name = "tssSeparator1";
-            this.tssSeparator1.Size = new System.Drawing.Size(6, 38);
+            this.tssSeparator1.Size = new System.Drawing.Size(6, 28);
             // 
             // treeView1
             // 
@@ -135,14 +133,6 @@ namespace PluginRegistrationUsingXml
             this.btnBrowsePluginsDLL.UseVisualStyleBackColor = true;
             this.btnBrowsePluginsDLL.Click += new System.EventHandler(this.btnBrowsePluginsDLL_Click);
             // 
-            // tsbClose
-            // 
-            this.tsbClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbClose.Name = "tsbClose";
-            this.tsbClose.Size = new System.Drawing.Size(129, 29);
-            this.tsbClose.Text = "Close this tool";
-            this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
-            // 
             // PluginRegistrationControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -178,6 +168,5 @@ namespace PluginRegistrationUsingXml
         private System.Windows.Forms.Button btnRegisterPlugins;
         private System.Windows.Forms.Button btnbrowseRegistrationFile;
         private System.Windows.Forms.Button btnBrowsePluginsDLL;
-        private System.Windows.Forms.ToolStripButton tsbClose;
     }
 }

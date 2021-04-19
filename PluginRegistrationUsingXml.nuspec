@@ -17,7 +17,6 @@
     <copyright>2021</copyright>
     <language>en-UK</language>
     <tags>Plugin Registration, Registration Xml,</tags>
-    <readme>bin\Release\README.md</readme>
     <dependencies>
       <dependency id="XrmToolBox" version="1.2017.10.19" />
     </dependencies>

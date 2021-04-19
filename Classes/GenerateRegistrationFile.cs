@@ -77,54 +77,75 @@ namespace PluginRegistrationUsingXml.Classes
             EntityCollection stepsColl = retrievePluginTypes.GetSdkProcessingStep(pluginTypeId, service);
             foreach (Entity sdkstep in stepsColl.Entities)
             {
-                XmlNode step = xmlDoc.CreateElement("Step");
-                steps.AppendChild(step);
-                XmlAttribute stepname = xmlDoc.CreateAttribute("Name");
-                stepname.Value = sdkstep["name"].ToString();
-                step.Attributes.Append(stepname);
-                XmlAttribute stepDescription = xmlDoc.CreateAttribute("Description");
-                stepDescription.Value = sdkstep["description"].ToString();
-                step.Attributes.Append(stepDescription);
-                XmlAttribute stepId = xmlDoc.CreateAttribute("Id");
-                stepId.Value = sdkstep.Id.ToString();
-                step.Attributes.Append(stepId);
-                if (sdkstep.Attributes.Contains("filteringattributes"))
+                try
                 {
-                    XmlAttribute filteringAttributes = xmlDoc.CreateAttribute("FilteringAttributes");
-                    filteringAttributes.Value = sdkstep["filteringattributes"].ToString();
-                    step.Attributes.Append(filteringAttributes);
-                }
-                XmlAttribute sdkstepMode = xmlDoc.CreateAttribute("Mode");
-                sdkstepMode.Value = sdkstep["mode"].ToString();
-                step.Attributes.Append(sdkstepMode);
-                EntityReference sdkmessageRef = (EntityReference)sdkstep["sdkmessageid"];
-                Entity sdkmessageEntity = service.Retrieve(sdkmessageRef.LogicalName, sdkmessageRef.Id, new ColumnSet("name"));
-                XmlAttribute sdkmessage = xmlDoc.CreateAttribute("MessageName");
-                sdkmessage.Value = sdkmessageEntity["name"].ToString();
-                step.Attributes.Append(sdkmessage);
-                XmlAttribute mode = xmlDoc.CreateAttribute("Mode");
-                mode.Value = ((OptionSetValue)sdkstep["mode"]).Value.ToString();
-                step.Attributes.Append(mode);
-                XmlAttribute rank = xmlDoc.CreateAttribute("Rank");
-                rank.Value = sdkstep["rank"].ToString();
-                step.Attributes.Append(rank);
-                XmlAttribute stage = xmlDoc.CreateAttribute("Stage");
-                stage.Value = ((OptionSetValue)sdkstep["stage"]).Value.ToString();
-                step.Attributes.Append(stage);
-                XmlAttribute supporteddeployment = xmlDoc.CreateAttribute("SupportedDeployment");
-                supporteddeployment.Value = ((OptionSetValue)sdkstep["supporteddeployment"]).Value.ToString();
-                step.Attributes.Append(supporteddeployment);
-                //sdkmessage filter
-                EntityReference sdkmessageFilterRef = (EntityReference)sdkstep["sdkmessagefilterid"];
-                Entity sdkmessageFilterEntity = service.Retrieve(sdkmessageFilterRef.LogicalName, sdkmessageFilterRef.Id, new ColumnSet("primaryobjecttypecode", "sdkmessageid"));
-                XmlAttribute primaryentity = xmlDoc.CreateAttribute("PrimaryEntityName");
-                primaryentity.Value = sdkmessageFilterEntity["primaryobjecttypecode"].ToString();
-                step.Attributes.Append(primaryentity);
+                    XmlNode step = xmlDoc.CreateElement("Step");
+                    steps.AppendChild(step);
+                    XmlAttribute stepname = xmlDoc.CreateAttribute("Name");
+                    stepname.Value = sdkstep["name"].ToString();
+                    step.Attributes.Append(stepname);
+                    XmlAttribute stepDescription = xmlDoc.CreateAttribute("Description");
+                    if (sdkstep.Attributes.Contains("description") && sdkstep["description"] != null)
+                    {
+                        stepDescription.Value = sdkstep["description"].ToString();
+                    }
+                    else
+                    {
+                        stepDescription.Value = sdkstep["name"].ToString();
+                    }
+                    step.Attributes.Append(stepDescription);
+                    XmlAttribute stepId = xmlDoc.CreateAttribute("Id");
+                    stepId.Value = sdkstep.Id.ToString();
+                    step.Attributes.Append(stepId);
+                    if (sdkstep.Attributes.Contains("filteringattributes"))
+                    {
+                        XmlAttribute filteringAttributes = xmlDoc.CreateAttribute("FilteringAttributes");
+                        filteringAttributes.Value = sdkstep["filteringattributes"].ToString();
+                        step.Attributes.Append(filteringAttributes);
+                    }
+                    XmlAttribute sdkstepMode = xmlDoc.CreateAttribute("Mode");
+                    sdkstepMode.Value = sdkstep["mode"].ToString();
+                    step.Attributes.Append(sdkstepMode);
+                    EntityReference sdkmessageRef = (EntityReference)sdkstep["sdkmessageid"];
+                    Entity sdkmessageEntity = service.Retrieve(sdkmessageRef.LogicalName, sdkmessageRef.Id, new ColumnSet("name"));
+                    XmlAttribute sdkmessage = xmlDoc.CreateAttribute("MessageName");
+                    sdkmessage.Value = sdkmessageEntity["name"].ToString();
+                    step.Attributes.Append(sdkmessage);
+                    XmlAttribute mode = xmlDoc.CreateAttribute("Mode");
+                    mode.Value = ((OptionSetValue)sdkstep["mode"]).Value.ToString();
+                    step.Attributes.Append(mode);
+                    XmlAttribute rank = xmlDoc.CreateAttribute("Rank");
+                    rank.Value = sdkstep["rank"].ToString();
+                    step.Attributes.Append(rank);
+                    XmlAttribute stage = xmlDoc.CreateAttribute("Stage");
+                    stage.Value = ((OptionSetValue)sdkstep["stage"]).Value.ToString();
+                    step.Attributes.Append(stage);
+                    XmlAttribute supporteddeployment = xmlDoc.CreateAttribute("SupportedDeployment");
+                    supporteddeployment.Value = ((OptionSetValue)sdkstep["supporteddeployment"]).Value.ToString();
+                    step.Attributes.Append(supporteddeployment);
+                    //sdkmessage filter
+                    XmlAttribute primaryentity = xmlDoc.CreateAttribute("PrimaryEntityName");
+                    if (sdkstep.Attributes.Contains("sdkmessagefilterid") && sdkstep["sdkmessagefilterid"] != null)
+                    {
+                        EntityReference sdkmessageFilterRef = (EntityReference)sdkstep["sdkmessagefilterid"];
+                        Entity sdkmessageFilterEntity = service.Retrieve(sdkmessageFilterRef.LogicalName, sdkmessageFilterRef.Id, new ColumnSet("primaryobjecttypecode", "sdkmessageid"));
+                        primaryentity.Value = sdkmessageFilterEntity["primaryobjecttypecode"].ToString();
+                    }
+                    else
+                    {
+                        primaryentity.Value = "none";
+                    }
+                    step.Attributes.Append(primaryentity);
 
-                //Images
-                XmlNode Images = xmlDoc.CreateElement("Images");
-                step.AppendChild(Images);
-                GeneratePluginSdkMessageImage(retrievePluginTypes, sdkstep.Id, ref Images, ref xmlDoc, service);
+                    //Images
+                    XmlNode Images = xmlDoc.CreateElement("Images");
+                    step.AppendChild(Images);
+                    GeneratePluginSdkMessageImage(retrievePluginTypes, sdkstep.Id, ref Images, ref xmlDoc, service);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
         }
 

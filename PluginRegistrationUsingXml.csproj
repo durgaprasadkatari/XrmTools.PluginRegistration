@@ -166,6 +166,10 @@
   <ItemGroup>
     <None Include="PluginRegistrationUsingXml.nuspec" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\microsoft-dynamics-crm-365-icon.ICO" />
+    <Content Include="Images\ReadMe.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if $(ConfigurationName) == Debug (

@@ -29,11 +29,11 @@ namespace PluginRegistrationUsingXml
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PluginRegistrationControl));
             this.toolStripMenu = new System.Windows.Forms.ToolStrip();
-            this.tssSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbGenerateXmlFile = new System.Windows.Forms.ToolStripButton();
+            this.tsbLoadPlugins = new System.Windows.Forms.ToolStripButton();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.btnLoadPlugins = new System.Windows.Forms.Button();
-            this.btnGenerateFile = new System.Windows.Forms.Button();
             this.txtRegistrationFile = new System.Windows.Forms.TextBox();
             this.txtBrowsePluginsdll = new System.Windows.Forms.TextBox();
             this.btnRegisterPlugins = new System.Windows.Forms.Button();
@@ -46,17 +46,33 @@ namespace PluginRegistrationUsingXml
             // 
             this.toolStripMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tssSeparator1});
+            this.tsbGenerateXmlFile,
+            this.tsbLoadPlugins});
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
-            this.toolStripMenu.Size = new System.Drawing.Size(1400, 28);
+            this.toolStripMenu.Size = new System.Drawing.Size(1400, 34);
             this.toolStripMenu.TabIndex = 4;
             this.toolStripMenu.Text = "toolStrip1";
             // 
-            // tssSeparator1
+            // tsbGenerateXmlFile
             // 
-            this.tssSeparator1.Name = "tssSeparator1";
-            this.tssSeparator1.Size = new System.Drawing.Size(6, 28);
+            this.tsbGenerateXmlFile.Image = ((System.Drawing.Image)(resources.GetObject("tsbGenerateXmlFile.Image")));
+            this.tsbGenerateXmlFile.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGenerateXmlFile.Name = "tsbGenerateXmlFile";
+            this.tsbGenerateXmlFile.Size = new System.Drawing.Size(240, 29);
+            this.tsbGenerateXmlFile.Text = "Generate Registration File";
+            this.tsbGenerateXmlFile.ToolTipText = "Generate Registration Xml File";
+            this.tsbGenerateXmlFile.Click += new System.EventHandler(this.tsbGenerateXmlFile_Click);
+            // 
+            // tsbLoadPlugins
+            // 
+            this.tsbLoadPlugins.Image = ((System.Drawing.Image)(resources.GetObject("tsbLoadPlugins.Image")));
+            this.tsbLoadPlugins.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbLoadPlugins.Name = "tsbLoadPlugins";
+            this.tsbLoadPlugins.Size = new System.Drawing.Size(232, 29);
+            this.tsbLoadPlugins.Text = "Load Plugins/Workflows";
+            this.tsbLoadPlugins.ToolTipText = "Load Plugins/Workflows";
+            this.tsbLoadPlugins.Click += new System.EventHandler(this.tsbLoadPlugins_Click);
             // 
             // treeView1
             // 
@@ -64,26 +80,6 @@ namespace PluginRegistrationUsingXml
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(1282, 525);
             this.treeView1.TabIndex = 5;
-            // 
-            // btnLoadPlugins
-            // 
-            this.btnLoadPlugins.Location = new System.Drawing.Point(27, 722);
-            this.btnLoadPlugins.Name = "btnLoadPlugins";
-            this.btnLoadPlugins.Size = new System.Drawing.Size(205, 42);
-            this.btnLoadPlugins.TabIndex = 6;
-            this.btnLoadPlugins.Text = "Load Plugins";
-            this.btnLoadPlugins.UseVisualStyleBackColor = true;
-            this.btnLoadPlugins.Click += new System.EventHandler(this.btnLoadPlugins_Click);
-            // 
-            // btnGenerateFile
-            // 
-            this.btnGenerateFile.Location = new System.Drawing.Point(289, 722);
-            this.btnGenerateFile.Name = "btnGenerateFile";
-            this.btnGenerateFile.Size = new System.Drawing.Size(239, 42);
-            this.btnGenerateFile.TabIndex = 7;
-            this.btnGenerateFile.Text = "Generate Registration File";
-            this.btnGenerateFile.UseVisualStyleBackColor = true;
-            this.btnGenerateFile.Click += new System.EventHandler(this.btnGenerateFile_Click);
             // 
             // txtRegistrationFile
             // 
@@ -103,7 +99,7 @@ namespace PluginRegistrationUsingXml
             // 
             // btnRegisterPlugins
             // 
-            this.btnRegisterPlugins.Location = new System.Drawing.Point(743, 40);
+            this.btnRegisterPlugins.Location = new System.Drawing.Point(691, 45);
             this.btnRegisterPlugins.Name = "btnRegisterPlugins";
             this.btnRegisterPlugins.Size = new System.Drawing.Size(205, 42);
             this.btnRegisterPlugins.TabIndex = 10;
@@ -142,8 +138,6 @@ namespace PluginRegistrationUsingXml
             this.Controls.Add(this.btnRegisterPlugins);
             this.Controls.Add(this.txtBrowsePluginsdll);
             this.Controls.Add(this.txtRegistrationFile);
-            this.Controls.Add(this.btnGenerateFile);
-            this.Controls.Add(this.btnLoadPlugins);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.toolStripMenu);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -159,14 +153,13 @@ namespace PluginRegistrationUsingXml
 
         #endregion
         private System.Windows.Forms.ToolStrip toolStripMenu;
-        private System.Windows.Forms.ToolStripSeparator tssSeparator1;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Button btnLoadPlugins;
-        private System.Windows.Forms.Button btnGenerateFile;
         private System.Windows.Forms.TextBox txtRegistrationFile;
         private System.Windows.Forms.TextBox txtBrowsePluginsdll;
         private System.Windows.Forms.Button btnRegisterPlugins;
         private System.Windows.Forms.Button btnbrowseRegistrationFile;
         private System.Windows.Forms.Button btnBrowsePluginsDLL;
+        private System.Windows.Forms.ToolStripButton tsbLoadPlugins;
+        private System.Windows.Forms.ToolStripButton tsbGenerateXmlFile;
     }
 }

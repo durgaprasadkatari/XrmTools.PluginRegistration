@@ -71,9 +71,13 @@ namespace PluginRegistrationUsingXml
 
             if (mySettings != null && detail != null)
             {
+                if (mySettings.LastUsedOrganizationWebappUrl != null)
+                {
+                    ExecuteMethod(LoadPlugins);
+                }
+
                 mySettings.LastUsedOrganizationWebappUrl = detail.WebApplicationUrl;
                 LogInfo("Connection has changed to: {0}", detail.WebApplicationUrl);
-                ExecuteMethod(LoadPlugins);
             }
         }
 

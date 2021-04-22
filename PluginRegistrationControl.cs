@@ -291,15 +291,15 @@ namespace PluginRegistrationUsingXml
 
         private void RegisterPlugins()
         {
-            if (txtRegistrationFile.Text == "Browse Registration file")
+            if (txtRegistrationFile.Text == "Browse Registration File")
             {
-                MessageBox.Show("Please browse registration xml file.");
+                MessageBox.Show("Please browse registration xml file.","Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (txtBrowsePluginsdll.Text == "Browse Plugins dll file")
+            if (txtBrowsePluginsdll.Text == "Browser Plugin Assembly DLL")
             {
-                MessageBox.Show("Please browse plugins dll file.");
+                MessageBox.Show("Please browse plugins dll file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

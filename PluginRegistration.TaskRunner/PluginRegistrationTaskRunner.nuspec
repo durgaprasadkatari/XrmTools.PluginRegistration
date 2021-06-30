@@ -16,5 +16,6 @@
     </metadata>
     <files>
         <file src="PluginRegistrationTaskRunner\*.*" target="content\PluginRegistrationTaskRunner\" />
+		<file src="RegisterFile.xml" target="content\RegisterFile.xml" />
     </files>
 </package>

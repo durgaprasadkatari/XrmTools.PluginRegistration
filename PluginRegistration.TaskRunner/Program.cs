@@ -21,7 +21,7 @@ namespace PluginRegistration.TaskRunner
                 string projectRoot = new FileInfo(exePath).DirectoryName;
                 IOrganizationService service = ConnectToCrm.GetCrmOrgnizationService(args[0]);
                 RegisterPlugins registerPlugins = new RegisterPlugins();
-                var registrationxmlPath = Path.Combine(projectRoot, "PluginRegistration.xml");
+                var registrationxmlPath = Path.Combine(projectRoot, "RegisterFile.xml");
                 var projectDll = Path.GetFileName(Path.GetDirectoryName(exePath)) + ".dll";
                 var projectbinfolder = Path.Combine(projectRoot, "bin", "debug", projectDll);
                 registerPlugins.RegisterPluginsFromXml(registrationxmlPath, projectbinfolder, service);

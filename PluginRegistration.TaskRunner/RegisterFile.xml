@@ -1,0 +1,21 @@
+<Register>
+  <Solutions>
+    <Solution Assembly="Project.Xrm.Plugins.dll" Id="f34ee300-37b7-eb11-8236-0022480030be" IsolationMode="2" SourceType="0">
+      <PluginTypes>
+        <Plugin friendlyname="Project.Xrm.Plugins.Case.PostOperationCasePlugin" Name="Project.Xrm.Plugins.Case.PostOperationCasePlugin" Id="c37181ef-15c9-eb11-bacc-000d3a86e58a" TypeName="Project.Xrm.Plugins.Case.PostOperationCasePlugin">
+          <Steps>
+            <Step Name="Project.Xrm.Plugins.PostOperationCasePlugin: Update of Case" Description="Project.Xrm.Plugins.PostOperationCasePlugin: Update of Case" Id="c47181ef-15c9-eb11-bacc-000d3a86e58a" FilteringAttributes="fsdyn_isrestricted,fsdyn_Projectcasetypeid" MessageName="Update" Mode="0" Rank="2" Stage="40" SupportedDeployment="0" PrimaryEntityName="incident">
+              <Images>
+                <Image Attributes="dyn_attribute1" EntityAlias="postImage" Name="postImage" Id="c67181ef-15c9-eb11-bacc-000d3a86e58a" MessagePropertyName="Target" ImageType="1" />
+              </Images>
+            </Step>
+            <Step Name="Project.Xrm.Plugins.PostOperationCasePlugin: Create of Case" Description="Project.Xrm.Plugins.PostOperationCasePlugin: Create of Restricted Case" Id="abb21134-1bc9-eb11-bacc-000d3a86e81e" MessageName="Create" Mode="0" Rank="2" Stage="40" SupportedDeployment="0" PrimaryEntityName="incident">
+              <Images />
+            </Step>
+          </Steps>
+        </Plugin>
+      </PluginTypes>
+      <WorkflowTypes />
+    </Solution>
+  </Solutions>
+</Register>

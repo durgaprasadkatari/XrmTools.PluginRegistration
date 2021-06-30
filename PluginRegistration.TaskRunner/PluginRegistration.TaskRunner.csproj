@@ -97,6 +97,9 @@
     <None Include="PluginRegistrationTaskRunner.nuspec" />
     <None Include="PluginRegistrationTaskRunner\deploy-plugins.bat" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="RegisterFile.xml" />
+  </ItemGroup>
   <Import Project="..\PluginRegistration.Shared\PluginRegistration.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

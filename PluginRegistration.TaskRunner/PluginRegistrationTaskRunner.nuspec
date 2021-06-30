@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>PluginRegistration.TaskRunner</id>
+        <version>1.0.0</version>
+        <title>Dynamics 365 Plugins deployment task runner</title>
+        <authors>Durgaprasad Katari</authors>
+        <licenseUrl>https://github.com/durgaprasadkatari/XrmTools.PluginRegistration/blob/main/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/durgaprasadkatari/XrmTools.PluginRegistration</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/durgaprasadkatari/XrmTools.PluginRegistration/main/Icons/microsoft-dynamics-crm-365-icon.ICO</iconUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>Simple and Lightweight plugins deployment task runner for Dynamics 365</description>
+        <language>en-GB</language>
+        <copyright>2021</copyright>
+        <tags>Plugin Registration, Registration Xml, Deployment task runner</tags>
+    </metadata>
+    <files>
+        <file src="PluginRegistrationTaskRunner\*.*" target="content\PluginRegistrationTaskRunner\" />
+    </files>
+</package>

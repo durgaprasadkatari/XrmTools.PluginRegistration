@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PluginRegistrationUsingXml.Models
+namespace PluginRegistration.Shared.Models
 {
     public class PluginAssembly
     {

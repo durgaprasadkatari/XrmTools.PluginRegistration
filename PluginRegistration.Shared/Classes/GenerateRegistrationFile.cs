@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace PluginRegistrationUsingXml.Classes
+namespace PluginRegistration.Shared.Classes
 {
     public class GenerateRegistrationFile
     {

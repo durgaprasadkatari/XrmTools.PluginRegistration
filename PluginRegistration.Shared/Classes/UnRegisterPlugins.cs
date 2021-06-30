@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PluginRegistrationUsingXml.Classes
+namespace PluginRegistration.Shared.Classes
 {
     public class UnRegisterPlugins
     {

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>b49981bc-0cb1-4bc9-8271-dbb42b7b1a90</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>PluginRegistration.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\GenerateRegistrationFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\RegisterPlugins.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\RetrievePluginTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\UnRegisterPlugins.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PluginAssembly.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\ConnectToCRM.cs" />
+  </ItemGroup>
+</Project>

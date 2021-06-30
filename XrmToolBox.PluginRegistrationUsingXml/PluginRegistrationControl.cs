@@ -1,8 +1,8 @@
 ﻿using McTools.Xrm.Connection;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Query;
-using PluginRegistrationUsingXml.Classes;
-using PluginRegistrationUsingXml.Models;
+using PluginRegistration.Shared.Classes;
+using PluginRegistration.Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

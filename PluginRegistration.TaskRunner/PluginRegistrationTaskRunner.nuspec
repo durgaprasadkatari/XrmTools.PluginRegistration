@@ -17,16 +17,15 @@
     <files>
         <file src="PluginRegistrationTaskRunner\*.*" target="content\PluginRegistrationTaskRunner\" />
 		<file src="RegisterFile.xml" target="content\RegisterFile.xml" />
-		<file src="..\PluginRegistration.TaskRunner\bin\Release\Microsoft.Crm.Sdk.Proxy.dll" target="tools\Microsoft.Crm.Sdk.Proxy.dll" />
-		<file src="..\PluginRegistration.TaskRunner\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" target="tools\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" />
-		<file src="..\PluginRegistration.TaskRunner\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll" target="tools\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll" />
-		<file src="..\PluginRegistration.TaskRunner\bin\Release\Microsoft.IdentityModel.dll" target="tools\Microsoft.IdentityModel.dll" />
-		<file src="..\PluginRegistration.TaskRunner\\bin\Release\Microsoft.Xrm.Sdk.Deployment.dll" target="tools\Microsoft.Xrm.Sdk.Deployment.dll" />
-		<file src="..\PluginRegistration.TaskRunner\bin\Release\Microsoft.Xrm.Sdk.dll" target="tools\Microsoft.Xrm.Sdk.dll" />
-		<file src="..\PluginRegistration.TaskRunner\bin\Release\Microsoft.Xrm.Sdk.Workflow.dll" target="tools\Microsoft.Xrm.Sdk.Workflow.dll" />
-		<file src="..\PluginRegistration.TaskRunner\bin\Release\Microsoft.Xrm.Tooling.Connector.dll" target="tools\Microsoft.Xrm.Tooling.Connector.dll" />
-		<file src="..\PluginRegistration.TaskRunner\bin\Release\Newtonsoft.Json.dll" target="tools\Newtonsoft.Json.dll" />
-		<file src="..\PluginRegistration.TaskRunner\bin\Release\SparkleXrm.Tasks.dll" target="tools\SparkleXrm.Tasks.dll" />
-		<file src="..\PluginRegistration.TaskRunner\bin\Release\PluginRegistration.TaskRunner.exe" target="tools\PluginRegistration.TaskRunner.exe" />
+		<file src="..\bin\Release\Microsoft.Crm.Sdk.Proxy.dll" target="tools\Microsoft.Crm.Sdk.Proxy.dll" />
+		<file src="..\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" target="tools\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" />
+		<file src="..\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll" target="tools\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll" />
+		<file src="..\bin\Release\Microsoft.IdentityModel.dll" target="tools\Microsoft.IdentityModel.dll" />
+		<file src="..\\bin\Release\Microsoft.Xrm.Sdk.Deployment.dll" target="tools\Microsoft.Xrm.Sdk.Deployment.dll" />
+		<file src="..\bin\Release\Microsoft.Xrm.Sdk.dll" target="tools\Microsoft.Xrm.Sdk.dll" />
+		<file src="..\bin\Release\Microsoft.Xrm.Sdk.Workflow.dll" target="tools\Microsoft.Xrm.Sdk.Workflow.dll" />
+		<file src="..\bin\Release\Microsoft.Xrm.Tooling.Connector.dll" target="tools\Microsoft.Xrm.Tooling.Connector.dll" />
+		<file src="..\bin\Release\Newtonsoft.Json.dll" target="tools\Newtonsoft.Json.dll" />
+		<file src="..\bin\Release\PluginRegistration.TaskRunner.exe" target="tools\PluginRegistration.TaskRunner.exe" />
     </files>
 </package>

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>PluginRegistration.TaskRunner</id>
-        <version>$version$</version>
+        <version>1.0.4</version>
         <title>Dynamics 365 Plugins deployment task runner</title>
         <authors>Durgaprasad Katari</authors>
         <licenseUrl>https://github.com/durgaprasadkatari/XrmTools.PluginRegistration/blob/main/LICENSE</licenseUrl>

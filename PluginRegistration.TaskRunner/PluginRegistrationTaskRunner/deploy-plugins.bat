@@ -1,7 +1,7 @@
 @echo off
 set package_root=..\..\
 REM Find the spkl in the package folder (irrespective of version)
-For /R %package_root% %%G IN (PluginRegistration.Deployment.exe) do (
+For /R %package_root% %%G IN (PluginRegistration.TasRunner.exe) do (
 	IF EXIST "%%G" (set taskrunner_path=%%G
 	goto :continue)
 	)

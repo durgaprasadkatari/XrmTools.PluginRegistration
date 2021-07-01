@@ -24,6 +24,7 @@ namespace PluginRegistration.Shared.Classes
             {
                 var id = node.GetAttribute("Id");
                 UnRegisterPlugins unregisterPlugins = new UnRegisterPlugins();
+                Console.WriteLine("Unregistering the plugin assembly: " + strPluginDllName);
                 unregisterPlugins.UnRegisterPluginTypes(new Guid(id), service);
                 var sourceType = Convert.ToInt32(node.GetAttribute("SourceType").ToString());
                 var isolationMode = Convert.ToInt32(node.GetAttribute("IsolationMode").ToString());
@@ -44,6 +45,7 @@ namespace PluginRegistration.Shared.Classes
                 XmlNodeList pluginTypeList = node.SelectNodes("PluginTypes/Plugin");
                 foreach (XmlElement pluginType in pluginTypeList)
                 {
+                    Console.WriteLine("Registering the plugin type: " + pluginType.GetAttribute("TypeName"));
                     Entity pluginTypeEntity = new Entity("plugintype", new Guid(pluginType.GetAttribute("Id")));
                     pluginTypeEntity["typename"] = pluginType.GetAttribute("TypeName");
                     pluginTypeEntity["friendlyname"] = pluginType.GetAttribute("friendlyname");
@@ -60,6 +62,7 @@ namespace PluginRegistration.Shared.Classes
                     XmlNodeList sdksteps = pluginType.SelectNodes("Steps/Step");
                     foreach (XmlElement sdkmessageStepNode in sdksteps)
                     {
+                        Console.WriteLine("Registering the sdk step: " + sdkmessageStepNode.GetAttribute("Name"));
                         Entity sdkmessageProcessingStep = new Entity("sdkmessageprocessingstep", new Guid(sdkmessageStepNode.GetAttribute("Id")));
                         sdkmessageProcessingStep["name"] = sdkmessageStepNode.GetAttribute("Name");
                         sdkmessageProcessingStep["description"] = sdkmessageStepNode.GetAttribute("Description");
@@ -123,9 +126,10 @@ namespace PluginRegistration.Shared.Classes
                     break;
             }
 
+            Console.WriteLine("Registering the sdk image: " + sdkstepImageNode.GetAttribute("Name"));
             image["imagetype"] = new OptionSetValue(Convert.ToInt32(sdkstepImageNode.GetAttribute("ImageType")));
             image["entityalias"] = sdkstepImageNode.GetAttribute("EntityAlias");
-            image["name"] = sdkstepImageNode.GetAttribute("Name"); ;
+            image["name"] = sdkstepImageNode.GetAttribute("Name");
             image["attributes"] = sdkstepImageNode.GetAttribute("Attributes");
             image["sdkmessageprocessingstepid"] = new EntityReference("sdkmessageprocessingstep", stepId);
             UpsertRequest upsertsdkImage = new UpsertRequest();

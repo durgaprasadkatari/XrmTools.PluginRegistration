@@ -7,7 +7,7 @@ For /R %package_root% %%G IN (PluginRegistration.TasRunner.exe) do (
 	)
 
 :continue
-@echo Using '%spkl_path%'
+@echo Using '%taskrunner_path%'
 REM spkl plugins [path] [connection-string] [/p:release]
 "%taskrunner_path%" "Url=https://crm-dev.crm11.dynamics.com;thumbprint=11111111;ClientId=11110-11132;AuthType=Certificate;" %*
 

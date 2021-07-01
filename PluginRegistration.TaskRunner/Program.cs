@@ -17,6 +17,7 @@ namespace PluginRegistration.TaskRunner
         {
             if (args.Length > 0)
             {
+                Console.WriteLine("PluginRegistration.TaskRunner is registering the plugins.. Please wait..");
                 var exePath = Directory.GetCurrentDirectory();
                 string projectRoot = new FileInfo(exePath).DirectoryName;
                 IOrganizationService service = ConnectToCrm.GetCrmOrgnizationService(args[0]);

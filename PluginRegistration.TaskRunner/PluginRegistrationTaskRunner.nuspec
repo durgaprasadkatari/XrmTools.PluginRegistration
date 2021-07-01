@@ -17,7 +17,6 @@
     <files>
         <file src="PluginRegistrationTaskRunner\*.*" target="content\PluginRegistrationTaskRunner\" />
 		<file src="RegisterFile.xml" target="content\RegisterFile.xml" />
-		<file src="..\PluginRegistration.TaskRunner\bin\Release\CmdLine.dll" target="tools\CmdLine.dll" />
 		<file src="..\PluginRegistration.TaskRunner\bin\Release\Microsoft.Crm.Sdk.Proxy.dll" target="tools\Microsoft.Crm.Sdk.Proxy.dll" />
 		<file src="..\PluginRegistration.TaskRunner\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" target="tools\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" />
 		<file src="..\PluginRegistration.TaskRunner\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll" target="tools\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll" />

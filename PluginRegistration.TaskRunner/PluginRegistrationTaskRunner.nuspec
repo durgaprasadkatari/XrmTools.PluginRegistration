@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>PluginRegistration.TaskRunner</id>
-        <version>1.0.5</version>
+        <version>1.0.6</version>
         <title>Dynamics 365 Plugins deployment task runner</title>
         <authors>Durgaprasad Katari</authors>
         <licenseUrl>https://github.com/durgaprasadkatari/XrmTools.PluginRegistration/blob/main/LICENSE</licenseUrl>
@@ -17,6 +17,7 @@
     <files>
         <file src="PluginRegistrationTaskRunner\*.*" target="content\PluginRegistrationTaskRunner\" />
 		<file src="RegisterFile.xml" target="content\RegisterFile.xml" />
+		<file src="..\PluginRegistration.TaskRunner\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" target="tools\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" />
 		<file src="..\PluginRegistration.TaskRunner\bin\Release\Microsoft.Crm.Sdk.Proxy.dll" target="tools\Microsoft.Crm.Sdk.Proxy.dll" />
 		<file src="..\PluginRegistration.TaskRunner\bin\Release\Microsoft.Xrm.Sdk.Deployment.dll" target="tools\Microsoft.Xrm.Sdk.Deployment.dll" />
 		<file src="..\PluginRegistration.TaskRunner\bin\Release\Microsoft.Xrm.Sdk.dll" target="tools\Microsoft.Xrm.Sdk.dll" />

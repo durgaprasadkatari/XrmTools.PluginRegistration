@@ -17,10 +17,12 @@ To register plugins from you local visual studion development IDE or from the az
 `Install-Package PluginRegistration.TaskRunner -Version 1.1.2`
 2. After installing the above package successfully it will add the below files to your plugins project.
 
+```
 📦Project.Xrm.Plugins
  ┣ 📂PluginRegistrationTaskRunner
  ┃ ┗ 📜deploy-plugins.bat
  ┣ 📜RegisterFile.xml
+ ```
 
 3. Make sure to update the connection string in the deploy-plugins.bat file.
 4. Generate and replace the "RegisterFile.xml" using xrm toolbox "Plugin registration using xml" tool and save the output xml into the plugins project with the same name.

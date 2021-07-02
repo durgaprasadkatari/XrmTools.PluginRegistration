@@ -13,7 +13,7 @@
 
 # Plugin Registration Task Runner
 To register plugins from you local visual studion development IDE or from the azure devops build pipeline.
-1. Install the below package from the nuget
+1. Install the this package from the nuget
 `Install-Package PluginRegistration.TaskRunner -Version 1.1.2`
 2. After installing the above package successfully it will add the below files to your plugins project.
 

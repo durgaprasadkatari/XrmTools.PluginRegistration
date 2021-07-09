@@ -35,6 +35,8 @@ namespace PluginRegistration.Shared.Classes
                 UpsertRequest upsertpluginAssemblyRequest = new UpsertRequest();
                 upsertpluginAssemblyRequest.Target = pluginAssembly;
                 UpsertResponse upsertPluginAssemblyResponse = (UpsertResponse)service.Execute(upsertpluginAssemblyRequest);
+                node.Attributes["Id"].Value = upsertPluginAssemblyResponse.Target.Id.ToString();
+                pluginAssembly.Id = upsertPluginAssemblyResponse.Target.Id;
                 XmlNodeList workflowTypeList = node.SelectNodes("WorkflowTypes/WorkflowType");
                 foreach (XmlElement workflowType in workflowTypeList)
                 {
